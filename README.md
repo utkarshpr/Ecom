@@ -1,7 +1,9 @@
-go run main.go
+> go run main.go
+
+
 SIGNUP FUNCTION API CALL (POST REQUEST)
 http://localhost:8000/users/signup
-
+```
 {
   "first_name": "Akhil",
   "last_name": "Sharma",
@@ -9,18 +11,20 @@ http://localhost:8000/users/signup
   "password": "akhilsharma",
   "phone": "+4534545435"
 }
+```
 Response :"Successfully Signed Up!!"
 
-LOGIN FUNCTION API CALL (POST REQUEST)
+> LOGIN FUNCTION API CALL (POST REQUEST)
 
 http://localhost:8000/users/login
-
+```
 {
   "email": "akhil@gmail.com",
   "password": "akhilsharma"
 }
+```
 response will be like this
-
+```
 {
   "_id": "***********************",
   "first_name": "akhil",
@@ -37,16 +41,18 @@ response will be like this
   "address": [],
   "orders": []
 }
+```
 Admin add Product Function (POST REQUEST)
 
 http://localhost:8000/admin/addproduct
-
+```
 {
   "product_name": "Alienware x15",
   "price": 2500,
   "rating": 10,
   "image": "alienware.jpg"
 }
+```
 Response : "Successfully added our Product Admin!!"
 
 View all the Products in db GET REQUEST
@@ -54,7 +60,7 @@ View all the Products in db GET REQUEST
 http://localhost:8000/users/productview
 
 Response
-
+```
 [
   {
     "Product_ID": "6153ff8edef2c3c0a02ae39a",
@@ -92,11 +98,12 @@ Response
     "image": "acer.jpg"
   }
 ]
+```
 Search Product by regex function (GET REQUEST)
 defines the word search sorting http://localhost:8000/users/search?name=al
 
 response:
-
+```
 [
   {
     "Product_ID": "616152fa9f29be942bd9df91",
@@ -113,6 +120,7 @@ response:
     "image": "1.jpg"
   }
 ]
+```
 Adding the Products to the Cart (GET REQUEST)
 
 http://localhost:8000/addtocart?id=xxxproduct_idxxx&userID=xxxxxxuser_idxxxxxx
